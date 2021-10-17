@@ -31,13 +31,16 @@ jobs:
           echo "YARN: $(yarn -v)"
           echo "NODE: $(node -v)"
 
-      - name: start
+      - name: Start Process
         run: echo STARTING BUILD PROCESS
       
-      - name: yarn
+      - name: Yarn Install
         run: yarn install
+      
+      - name: Yarn Build Vitepress
+        run: yarn docs:build
 
-      - name: stop
+      - name: Stop Process
         run: echo FINISHING BUILD PROCESS
       
       # Runs a single command using the runners shell
