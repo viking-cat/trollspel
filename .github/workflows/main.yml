@@ -35,7 +35,7 @@ jobs:
         run: echo STARTING BUILD PROCESS
       
       - name: yarn
-        run: yarn init
+        run: yarn install
 
       - name: stop
         run: echo FINISHING BUILD PROCESS
