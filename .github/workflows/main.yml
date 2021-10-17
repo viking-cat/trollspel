@@ -25,11 +25,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
+      - name: Environment
+        run: echo "NPM:  $(npm -v)"
+        run: echo "YARN: $(yarn -v)"
+        run: echo "NODE: $(node -v)"
+
       - name: start
         run: echo STARTING BUILD PROCESS
       
       - name: yarn
-        run: yarn -h
+        run: yarn init
 
       - name: stop
         run: echo FINISHING BUILD PROCESS
